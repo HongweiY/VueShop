@@ -1,6 +1,7 @@
 <component name="ProjectDictionaryState">
   <dictionary name="ymfsd">
     <words>
+      <w>authtoken</w>
       <w>backends</w>
       <w>clickjacking</w>
       <w>cors</w>
