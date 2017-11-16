@@ -4,6 +4,7 @@ from rest_framework import viewsets
 
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
+from rest_framework.authentication import TokenAuthentication
 
 from .filters import GoodsFilter
 from .models import Goods, GoodsCategory
@@ -25,7 +26,8 @@ class GoodsListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Goods.objects.all()
     serializer_class = GoodsSerializer
     pagination_class = GoodsPagination
-    # authentication_classes = (TokenAuthentication, )
+    # 配置权限链接
+    # authentication_classes = (TokenAuthentication,)
     filter_backends = (DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter)
     filter_class = GoodsFilter
     search_fields = ('name', 'goods_brief', 'goods_desc')

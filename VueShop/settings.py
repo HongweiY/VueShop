@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'corsheaders',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,27 @@ STATICFILES_DIRS = (
 )
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+# 自定义用户认证
+AUTHENTICATION_BACKENDS = (
+    'users.views.CustomBackends',
+)
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+
+    )
+}
+
+import datetime
+
+# jWT自定义设置
+JWT_AUTH = {
+    # 设置过期时间
+    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7),
+    # 设置前缀
+    'JWT_AUTH_HEADER_PREFIX': 'JWT',
+}
