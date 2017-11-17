@@ -1,6 +1,8 @@
 <component name="ProjectDictionaryState">
   <dictionary name="ymfsd">
     <words>
+      <w>apikey</w>
+      <w>attrs</w>
       <w>authtoken</w>
       <w>backends</w>
       <w>clickjacking</w>
@@ -12,7 +14,9 @@
       <w>wsgi</w>
       <w>xadmin</w>
       <w>ymfsder</w>
+      <w>ymfser</w>
       <w>ymshop</w>
+      <w>yunpian</w>
     </words>
   </dictionary>
 </component>
