@@ -5,13 +5,16 @@ from random import choice
 from django.contrib.auth.backends import ModelBackend
 from django.contrib.auth import get_user_model
 from django.db.models import Q
-from rest_framework.mixins import CreateModelMixin
+from rest_framework import mixins
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework_jwt.serializers import jwt_payload_handler, jwt_encode_handler
+from rest_framework import permissions
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
+from rest_framework.authentication import SessionAuthentication
 
-from .serializers import SmsSerializer, UserRegSerializer
+from .serializers import SmsSerializer, UserRegSerializer, UserDetailSerializer
 from utils.yunpian import Yunpian
 from VueShop.settings import YUNPIAN_API_KEY
 from .models import VerifyCode
@@ -35,7 +38,7 @@ class CustomBackends(ModelBackend):
             return None
 
 
-class SmsCodeViewSet(CreateModelMixin, viewsets.GenericViewSet):
+class SmsCodeViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
     """
     发送短信验证码
     """
@@ -71,12 +74,30 @@ class SmsCodeViewSet(CreateModelMixin, viewsets.GenericViewSet):
             }, status=status.HTTP_201_CREATED)
 
 
-class UserViewSet(CreateModelMixin, viewsets.GenericViewSet):
+class UserViewSet(mixins.CreateModelMixin, mixins.RetrieveModelMixin, mixins.UpdateModelMixin, viewsets.GenericViewSet):
     """"
     用户注册
     """
     serializer_class = UserRegSerializer
     queryset = User.objects.all()
+    authentication_classes = (JSONWebTokenAuthentication, SessionAuthentication)
+
+    # 自定义用户权限
+    def get_permissions(self):
+        if self.action == 'retrieve':
+            return [permissions.IsAuthenticated()]
+        elif self.action == 'create':
+            return []
+
+        return []
+
+    # 自定义用户实例化
+    def get_serializer_class(self):
+        if self.action == 'retrieve':
+            return UserDetailSerializer
+        elif self.action == 'create':
+            return UserRegSerializer
+        return UserDetailSerializer
 
     def create(self, request, *args, **kwargs):
         # 重载，返回token
@@ -90,6 +111,9 @@ class UserViewSet(CreateModelMixin, viewsets.GenericViewSet):
 
         headers = self.get_success_headers(serializer.data)
         return Response(re_dict, status=status.HTTP_201_CREATED, headers=headers)
+
+    def get_object(self):
+        return self.request.user
 
     def perform_create(self, serializer):
         # 重载，返回user

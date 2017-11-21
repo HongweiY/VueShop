@@ -78,3 +78,13 @@ class UserRegSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('username', 'code', 'mobile', 'password')
+
+
+class UserDetailSerializer(serializers.ModelSerializer):
+    """
+    用户信息详情
+    """
+
+    class Meta:
+        model = User
+        fields = ('name', 'gender', 'birthday', 'mobile', 'email')
