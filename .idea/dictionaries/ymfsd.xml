@@ -10,6 +10,7 @@
       <w>corsheaders</w>
       <w>csrf</w>
       <w>intance</w>
+      <w>shopcarts</w>
       <w>ueditor</w>
       <w>userfavs</w>
       <w>wsgi</w>

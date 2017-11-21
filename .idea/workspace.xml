@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c404299d-841e-4148-a1aa-ed3218658fd6" name="Default" comment="完成商品详情页，包括商品详情的展示，商品的收藏功能以及以下小的改动">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/message/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/message/images/logo_MTYZtwD.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/message/images/logo_QYRg4V6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/message/images/logo_RVaIofi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/message/images/logo_To5fPQv.png" />
+    <list default="true" id="c404299d-841e-4148-a1aa-ed3218658fd6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/trade/serializers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/ymfsd.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/ymfsd.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VueShop/urls.py" afterPath="$PROJECT_DIR$/VueShop/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/user_operation/serializers.py" afterPath="$PROJECT_DIR$/apps/user_operation/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/user_operation/views.py" afterPath="$PROJECT_DIR$/apps/user_operation/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/users/serializers.py" afterPath="$PROJECT_DIR$/apps/users/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/users/views.py" afterPath="$PROJECT_DIR$/apps/users/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/trade/views.py" afterPath="$PROJECT_DIR$/apps/trade/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +28,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/user_operation/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="51" column="24" lean-forward="false" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="24" />
+            <state relative-caret-position="398">
+              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="29" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -43,11 +37,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/user_operation/serializers.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/trade/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="70" column="13" lean-forward="false" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="13" />
+            <state relative-caret-position="444">
+              <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/trade/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/trade/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-568">
+              <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
               <folding>
                 <element signature="e#47#56#0" expanded="true" />
               </folding>
@@ -55,45 +73,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitattributes" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitattributes">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/user_operation/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
-              <caret line="64" column="80" lean-forward="false" selection-start-line="64" selection-start-column="78" selection-end-line="64" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VueShop/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="45" column="46" lean-forward="false" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
+            <state relative-caret-position="654">
+              <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
               <folding>
                 <element signature="e#641#682#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/users/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="36" />
-              <folding>
-                <element signature="e#48#57#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,9 +129,11 @@
         <option value="$PROJECT_DIR$/apps/users/serializers.py" />
         <option value="$PROJECT_DIR$/apps/users/views.py" />
         <option value="$PROJECT_DIR$/apps/user_operation/views.py" />
-        <option value="$PROJECT_DIR$/VueShop/urls.py" />
         <option value="$PROJECT_DIR$/apps/user_operation/models.py" />
         <option value="$PROJECT_DIR$/apps/user_operation/serializers.py" />
+        <option value="$PROJECT_DIR$/VueShop/urls.py" />
+        <option value="$PROJECT_DIR$/apps/trade/views.py" />
+        <option value="$PROJECT_DIR$/apps/trade/serializers.py" />
       </list>
     </option>
   </component>
@@ -197,7 +185,7 @@
               <item name="VueShop" type="b2602c69:ProjectViewProjectNode" />
               <item name="VueShop" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="goods" type="462c0819:PsiDirectoryNode" />
+              <item name="trade" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VueShop" type="b2602c69:ProjectViewProjectNode" />
@@ -235,15 +223,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\PyCharm\VueShop\apps" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\PyCharm\VueShop\apps\trade" />
       <recent name="E:\PyCharm\VueShop\VueShopTemplate" />
       <recent name="E:\PyCharm\VueShop\apps\goods" />
       <recent name="E:\PyCharm\VueShop\extra_apps" />
       <recent name="E:\PyCharm\VueShop\apps\users" />
-      <recent name="E:\PyCharm\VueShop\apps\user_operation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\PyCharm\VueShop\apps" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -392,13 +380,21 @@
       <option name="project" value="LOCAL" />
       <updated>1510884753627</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完成用户留言收货地址">
+      <created>1511243747346</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1511243747346</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1741453" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1741453" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30415756" sideWeight="0.50213677" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -457,7 +453,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="完成用户手机号码注册，包括验证码的发送，验证等" />
     <MESSAGE value="语言设置" />
-    <option name="LAST_COMMIT_MESSAGE" value="语言设置" />
+    <MESSAGE value="完成用户留言收货地址" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成用户留言收货地址" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -485,35 +482,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/goods/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="35" column="7" lean-forward="false" selection-start-line="34" selection-start-column="50" selection-end-line="35" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VueShop/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="29" column="72" lean-forward="false" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
-          <folding>
-            <element signature="e#641#682#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VueShop/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1449">
-          <caret line="64" column="28" lean-forward="false" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/goods/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -521,6 +494,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="e#48#86#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -535,6 +511,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -735,6 +712,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -742,6 +720,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2277">
           <caret line="102" column="9" lean-forward="false" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -759,6 +738,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5359">
           <caret line="255" column="0" lean-forward="false" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -766,6 +746,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="469">
           <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="26" selection-end-line="36" selection-end-column="27" />
+          <folding>
+            <element signature="e#48#86#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -784,16 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1794">
-          <caret line="97" column="21" lean-forward="false" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VueShop/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -807,26 +780,6 @@
         <state relative-caret-position="217">
           <caret line="149" column="6" lean-forward="false" selection-start-line="149" selection-start-column="6" selection-end-line="149" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/user_operation/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="51" column="24" lean-forward="false" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VueShop/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="45" column="46" lean-forward="false" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
-          <folding>
-            <element signature="e#641#682#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,6 +801,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/user_operation/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
@@ -858,11 +819,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
+    <entry file="file://$PROJECT_DIR$/apps/trade/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        <state relative-caret-position="161">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VueShop/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding>
+            <element signature="e#641#682#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1571">
+          <caret line="97" column="21" lean-forward="false" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/trade/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/user_operation/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/trade/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-568">
+          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding>
+            <element signature="e#47#56#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
