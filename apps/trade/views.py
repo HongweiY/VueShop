@@ -101,7 +101,7 @@ class AliPayView(APIView):
                 existed_order.save()
 
             response = redirect("index")
-            response.set_cookie("nextPath", "pay", max_age=3)
+            response.set_cookie("nextPath", "pay", max_age=1)
             return response
         else:
             response = redirect("index")
