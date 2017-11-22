@@ -12,7 +12,7 @@ from .models import ShoppingCart, OrderInfo, OrderGoods
 from rest_framework.views import APIView
 from utils.alipay import AliPay
 from VueShop.settings import private_key_path, alipay_key_path
-import datetime
+from datetime import datetime
 
 
 # Create your views here.
