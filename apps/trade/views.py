@@ -91,20 +91,20 @@ class AliPayView(APIView):
         if verify_re is True:
             order_sn = processed_dict.get('out_trade_no', None)
             trade_no = processed_dict.get('trade_no', None)
-            trade_status = processed_dict.get('trade_status', None)
+            # trade_status = processed_dict.get('trade_status', None)
 
             existed_orders = OrderInfo.objects.filter(order_sn=order_sn)
             for existed_order in existed_orders:
-                existed_order.pay_status = trade_status
+                # existed_order.pay_status = trade_status
                 existed_order.trade_no = trade_no
                 existed_order.pay_time = datetime.now()
                 existed_order.save()
 
-            response = redirect('index')
-            response.set_cookie('nextPath', 'pay', max_age=2)
+            response = redirect("index")
+            response.set_cookie("nextPath", "pay", max_age=3)
             return response
         else:
-            response = redirect('index')
+            response = redirect("index")
             return response
 
     def post(self, request):
