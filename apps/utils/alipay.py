@@ -145,7 +145,7 @@ if __name__ == "__main__":
 
     url = alipay.direct_pay(
         subject="ymfsder",
-        out_trade_no="201702021299",
+        out_trade_no="201702021235",
         total_amount=9999,
         return_url="http://45.77.220.209:8001/alipay/return/"
     )

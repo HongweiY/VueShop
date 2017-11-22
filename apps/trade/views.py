@@ -93,3 +93,4 @@ class AliPayView(APIView):
             return_url="http://45.77.220.209:8001/alipay/return/"
         )
         verify_re = alipay.verify(processed_dict, sign)
+        psss
