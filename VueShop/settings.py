@@ -167,3 +167,7 @@ JWT_AUTH = {
 
 REGEX_MOBILE = '^(13[0-9]|14[579]|15[0-3,5-9]|17[0135678]|18[0-9])\d{8}$'
 YUNPIAN_API_KEY = '91165575f1dd324b9cb41ae9d717fe4b'
+
+# 支付宝相关配置
+private_key_path = os.path.join(BASE_DIR, 'apps/trade/keys/private_2048.txt')
+alipay_key_path = os.path.join(BASE_DIR, 'apps/trade/keys/alipay_key_2048.txt')

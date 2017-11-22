@@ -8,6 +8,8 @@ from utils.permissions import IsOwnerOrReadOnly
 from .serializers import ShoppingCartSerializer, ShoppingCartDetailSerializer, OrderSerializer, OrderDetailSerializer
 from .models import ShoppingCart, OrderInfo, OrderGoods
 from rest_framework.views import APIView
+from utils.alipay import AliPay
+from VueShop.settings import private_key_path, alipay_key_path
 
 
 # Create your views here.
@@ -77,5 +79,17 @@ class AliPayView(APIView):
         :param request:
         :return:
         """
+        processed_dict = {}
+        for key, value in request.POST.items():
+            processed_dict[key] = value
+        sign = processed_dict.pop('sign', None)
 
-        pass
+        alipay = AliPay(
+            appid="2016082500308985",
+            app_notify_url="http://45.77.220.209:8001/alipay/return/",
+            app_private_key_path=private_key_path,
+            alipay_public_key_path=alipay_key_path,  # 支付宝的公钥，验证支付宝回传消息使用，不是你自己的公钥,
+            debug=True,  # 默认False,
+            return_url="http://45.77.220.209:8001/alipay/return/"
+        )
+        verify_re = alipay.verify(processed_dict, sign)
