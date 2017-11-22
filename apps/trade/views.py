@@ -5,8 +5,9 @@ from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from rest_framework import mixins
 
 from utils.permissions import IsOwnerOrReadOnly
-from .serializers import ShoppingCartSerializer, ShoppingCartDetailSerializer, OrderSerializer,OrderDetailSerializer
+from .serializers import ShoppingCartSerializer, ShoppingCartDetailSerializer, OrderSerializer, OrderDetailSerializer
 from .models import ShoppingCart, OrderInfo, OrderGoods
+from rest_framework.views import APIView
 
 
 # Create your views here.
@@ -59,3 +60,22 @@ class OrderInfoViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Re
 
             shop_card.delete()
         return order
+
+
+class AliPayView(APIView):
+    def get(self, request):
+        """
+        处理同步返回
+        :param request:
+        :return:
+        """
+        pass
+
+    def post(self, request):
+        """
+        处理一步请求
+        :param request:
+        :return:
+        """
+
+        pass
