@@ -1,14 +1,14 @@
 from rest_framework import mixins
 from rest_framework.pagination import PageNumberPagination
 from rest_framework import viewsets
-
+from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
-from rest_framework.authentication import TokenAuthentication
 
 from .filters import GoodsFilter
-from .models import Goods, GoodsCategory
-from .serializers import GoodsSerializer, CategorySerializer
+from .models import Goods, GoodsCategory, HotSearchWords, Banner
+from .serializers import GoodsSerializer, CategorySerializer, HotSearchWordsSerializer, BannerSerializer, \
+    IndexCategorySerializer
 
 
 class GoodsPagination(PageNumberPagination):
@@ -33,6 +33,14 @@ class GoodsListViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewset
     search_fields = ('name', 'goods_brief', 'goods_desc')
     ordering_fields = ('sold_num', 'shop_price')
 
+    # 记录用户点击数
+    def retrieve(self, request, *args, **kwargs):
+        instance = self.get_object()
+        instance.click_num += 1
+        instance.save()
+        serializer = self.get_serializer(instance)
+        return Response(serializer.data)
+
 
 class CategoryListViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     """
@@ -41,3 +49,27 @@ class CategoryListViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, view
     """
     queryset = GoodsCategory.objects.filter(category_type=1)
     serializer_class = CategorySerializer
+
+
+class HotSearchWordsViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    """
+    热搜词
+    """
+    queryset = HotSearchWords.objects.all().order_by('-index')
+    serializer_class = HotSearchWordsSerializer
+
+
+class BannerViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    """
+    获取轮播图列表
+    """
+    queryset = Banner.objects.all().order_by("index")
+    serializer_class = BannerSerializer
+
+
+class IndexCategoryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    """
+    首页分页
+    """
+    queryset = GoodsCategory.objects.filter(is_tab=True)
+    serializer_class = IndexCategorySerializer
